@@ -1,0 +1,20 @@
+
+Dump of file ASCII_C.OBJ
+
+File Type: COFF OBJECT
+
+RELOCATIONS #3
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000042  REL32                      00000000         9  _putchar
+ 0000005B  REL32                      00000000         9  _putchar
+ 00000067  REL32                      00000000         9  _putchar
+ 00000084  REL32                      00000000         A  _print_ascii
+
+  Summary
+
+          20 .chks64
+          88 .debug$S
+          2F .drectve
+          8C .text$mn

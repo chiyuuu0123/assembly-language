@@ -1,0 +1,73 @@
+
+Dump of file ASCII_C.OBJ
+
+File Type: COFF OBJECT
+
+_print_ascii:
+  00000000: 55                 push        ebp
+  00000001: 8B EC              mov         ebp,esp
+  00000003: 83 EC 0C           sub         esp,0Ch
+  00000006: C7 45 F4 61 00 00  mov         dword ptr [ebp-0Ch],61h
+            00
+  0000000D: C7 45 F8 00 00 00  mov         dword ptr [ebp-8],0
+            00
+  00000014: EB 09              jmp         0000001F
+  00000016: 8B 45 F8           mov         eax,dword ptr [ebp-8]
+  00000019: 83 C0 01           add         eax,1
+  0000001C: 89 45 F8           mov         dword ptr [ebp-8],eax
+  0000001F: 83 7D F8 02        cmp         dword ptr [ebp-8],2
+  00000023: 7D 4B              jge         00000070
+  00000025: C7 45 FC 00 00 00  mov         dword ptr [ebp-4],0
+            00
+  0000002C: EB 09              jmp         00000037
+  0000002E: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00000031: 83 C1 01           add         ecx,1
+  00000034: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00000037: 83 7D FC 0D        cmp         dword ptr [ebp-4],0Dh
+  0000003B: 7D 27              jge         00000064
+  0000003D: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  00000040: 52                 push        edx
+  00000041: E8 00 00 00 00     call        _putchar
+  00000046: 83 C4 04           add         esp,4
+  00000049: 8B 45 F4           mov         eax,dword ptr [ebp-0Ch]
+  0000004C: 83 C0 01           add         eax,1
+  0000004F: 89 45 F4           mov         dword ptr [ebp-0Ch],eax
+  00000052: 83 7D FC 0C        cmp         dword ptr [ebp-4],0Ch
+  00000056: 7D 0A              jge         00000062
+  00000058: 6A 20              push        20h
+  0000005A: E8 00 00 00 00     call        _putchar
+  0000005F: 83 C4 04           add         esp,4
+  00000062: EB CA              jmp         0000002E
+  00000064: 6A 0A              push        0Ah
+  00000066: E8 00 00 00 00     call        _putchar
+  0000006B: 83 C4 04           add         esp,4
+  0000006E: EB A6              jmp         00000016
+  00000070: 8B E5              mov         esp,ebp
+  00000072: 5D                 pop         ebp
+  00000073: C3                 ret
+  00000074: CC                 int         3
+  00000075: CC                 int         3
+  00000076: CC                 int         3
+  00000077: CC                 int         3
+  00000078: CC                 int         3
+  00000079: CC                 int         3
+  0000007A: CC                 int         3
+  0000007B: CC                 int         3
+  0000007C: CC                 int         3
+  0000007D: CC                 int         3
+  0000007E: CC                 int         3
+  0000007F: CC                 int         3
+_main:
+  00000080: 55                 push        ebp
+  00000081: 8B EC              mov         ebp,esp
+  00000083: E8 00 00 00 00     call        _print_ascii
+  00000088: 33 C0              xor         eax,eax
+  0000008A: 5D                 pop         ebp
+  0000008B: C3                 ret
+
+  Summary
+
+          20 .chks64
+          88 .debug$S
+          2F .drectve
+          8C .text$mn

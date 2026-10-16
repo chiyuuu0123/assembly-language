@@ -1,0 +1,80 @@
+Microsoft (R) Macro Assembler Version 5.00                  10/16/26 18:37:36
+                                                             Page     1-1
+
+
+				; 8086 / MASM 5.0: nested LOOP, 2 rows x 13 let
+				ters.
+				.MODEL SMALL
+ 0100				.STACK 100H
+ 0000				.CODE
+ 0000				START:
+ 0000  B3 61			    MOV BL,'a'
+ 0002  B9 0002			    MOV CX,2               ; Outer counter: two
+				 rows.
+ 0005				ROW_BEGIN:
+ 0005  51			    PUSH CX                ; Save outer CX befo
+				re using CX inside.
+ 0006  B9 000D			    MOV CX,13              ; Inner counter: thi
+				rteen letters.
+ 0009				COL_BEGIN:
+ 0009  B4 02			    MOV AH,02H
+ 000B  8A D3			    MOV DL,BL
+ 000D  CD 21			    INT 21H
+ 000F  FE C3			    INC BL
+ 0011  83 F9 01			    CMP CX,1
+ 0014  74 04			    JE NO_SPACE            ; No trailing space
+				after column 13.
+ 0016  B2 20			    MOV DL,' '
+ 0018  CD 21			    INT 21H
+ 001A				NO_SPACE:
+ 001A  E2 ED			    LOOP COL_BEGIN         ; CX = CX - 1; repea
+				t while CX != 0.
+ 001C  B2 0D			    MOV DL,0DH
+ 001E  CD 21			    INT 21H
+ 0020  B2 0A			    MOV DL,0AH
+ 0022  CD 21			    INT 21H
+ 0024  59			    POP CX                 ; Restore the outer
+				loop counter.
+ 0025  E2 DE			    LOOP ROW_BEGIN
+ 0027  B8 4C00			    MOV AX,4C00H
+ 002A  CD 21			    INT 21H
+ 002C				END START
+Microsoft (R) Macro Assembler Version 5.00                  10/16/26 18:37:36
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+DGROUP . . . . . . . . . . . . .  	GROUP
+  _DATA  . . . . . . . . . . . .  	0000	WORD	PUBLIC	'DATA'
+  STACK  . . . . . . . . . . . .  	0100	PARA	STACK	'STACK'
+_TEXT  . . . . . . . . . . . . .  	002C	WORD	PUBLIC	'CODE'
+
+Symbols:
+
+                N a m e         	Type	 Value	 Attr
+
+COL_BEGIN  . . . . . . . . . . .  	L NEAR	0009	_TEXT
+
+NO_SPACE . . . . . . . . . . . .  	L NEAR	001A	_TEXT
+
+ROW_BEGIN  . . . . . . . . . . .  	L NEAR	0005	_TEXT
+
+START  . . . . . . . . . . . . .  	L NEAR	0000	_TEXT
+
+@CODE  . . . . . . . . . . . . .  	TEXT  _TEXT
+@CODESIZE  . . . . . . . . . . .  	TEXT  0
+@DATASIZE  . . . . . . . . . . .  	TEXT  0
+@FILENAME  . . . . . . . . . . .  	TEXT  ASCII_L
+
+
+     30 Source  Lines
+     30 Total   Lines
+     18 Symbols
+
+  51152 + 465392 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

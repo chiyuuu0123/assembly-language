@@ -6,6 +6,7 @@
 | --- | --- | --- | --- |
 | 作业1 | [homework-01](https://github.com/chiyuuu0123/assembly-language/tree/homework-01) | 搭建环境；常规方式及直接写内存方式运行 Hello world | [作业1说明](https://github.com/chiyuuu0123/assembly-language/blob/homework-01/作业1说明.md) |
 | 作业2 | [homework-02](https://github.com/chiyuuu0123/assembly-language/tree/homework-02) | LOOP 与条件跳转打印小写 ASCII 表；C 实现及反汇编注释 | [作业2说明](https://github.com/chiyuuu0123/assembly-language/blob/homework-02/作业2说明.md) |
+| 作业3 | [homework-03](https://github.com/chiyuuu0123/assembly-language/tree/homework-03) | 求和与十进制输出；寄存器、数据段、栈存储；输入 1～100；C 实现及反汇编注释 | [作业3说明](https://github.com/chiyuuu0123/assembly-language/blob/homework-03/作业3说明.md) |
 
 ## 获取作业
 
@@ -15,13 +16,13 @@ cd assembly-language
 git switch homework-01
 ```
 
-查看作业2时使用 `git switch homework-02`。各作业分支从 `main` 独立创建，保存该次作业的源代码、构建脚本、说明及运行记录。
+查看作业2或作业3时分别使用 `git switch homework-02`、`git switch homework-03`。各作业分支从 `main` 独立创建，保存该次作业的源代码、构建脚本、说明及运行记录。
 
 ## 运行环境
 
-请先阅读 [环境配置说明](ENVIRONMENT.md)。仓库提供源码和脚本，第三方工具与构建后的可执行文件由本地环境提供。完成配置后，在对应分支双击 `运行作业1.cmd` 或 `运行作业2.cmd`。
+请先阅读 [环境配置说明](ENVIRONMENT.md)。仓库提供源码和脚本，第三方工具与构建后的可执行文件由本地环境提供。完成配置后，在对应分支双击对应的 `运行作业N.cmd`。
 
-两个汇编作业均在 DOSBox 中运行。作业2的 C 版本使用 MSVC 编译为 32 位 Windows 控制台程序，并提供实际目标文件的反汇编及中文注释。
+汇编作业在 DOSBox 中运行。作业2和作业3的 C 版本使用 MSVC 编译为 32 位 Windows 控制台程序，并提供实际目标文件的反汇编及中文注释。
 
 ## 后续作业约定
 

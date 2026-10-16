@@ -1,0 +1,34 @@
+# Local course tools and installers
+/tools/
+/环境资料/
+/tmp/
+*.exe
+*.EXE
+*.com
+*.COM
+*.dll
+*.DLL
+*.zip
+*.ZIP
+
+# Build intermediates; selected text listings are committed intentionally
+*.obj
+*.OBJ
+*.crf
+*.CRF
+*.map
+*.MAP
+*.pdb
+*.PDB
+*.ilk
+*.ILK
+stdout.txt
+stderr.txt
+DONE.TXT
+
+# Editor and operating system files
+.vs/
+.vscode/
+__pycache__/
+Thumbs.db
+.DS_Store

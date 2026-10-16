@@ -1,0 +1,57 @@
+
+Dump of file SUM_C.OBJ
+
+File Type: COFF OBJECT
+
+RELOCATIONS #3
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 0000013C  REL32                      00000000        1A  _sum_to_n
+ 00000145  DIR32                      00000000        20  $SG10577
+ 0000014A  REL32                      00000000        18  _printf
+ 00000154  REL32                      00000000        10  ___acrt_iob_func
+ 0000015D  DIR32                      00000000        21  $SG10578
+ 00000162  REL32                      00000000        13  _fputs
+ 0000016C  REL32                      00000000        10  ___acrt_iob_func
+ 00000181  REL32                      00000000        12  _fgets
+ 000001A0  REL32                      00000000        19  _strchr
+ 000001AE  REL32                      00000000        10  ___acrt_iob_func
+ 000001B7  REL32                      00000000        11  _feof
+ 000001C3  REL32                      00000000        14  _getchar
+ 000001D9  DIR32                      00000000        22  $SG10581
+ 000001DE  REL32                      00000000        15  _puts
+ 000001F6  REL32                      00000000        1B  _parse_n
+ 00000204  DIR32                      00000000        23  $SG10583
+ 00000209  REL32                      00000000        15  _puts
+ 0000021A  REL32                      00000000        1A  _sum_to_n
+ 00000223  DIR32                      00000000        24  $SG10584
+ 00000228  REL32                      00000000        18  _printf
+
+RELOCATIONS #4
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000004  DIR32                      00000000        1D  ?_OptionsStorage@?1??__local_stdio_printf_options@@9@9 (`__local_stdio_printf_options'::`2'::_OptionsStorage)
+
+RELOCATIONS #5
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000014  REL32                      00000000         F  ___local_stdio_printf_options
+ 00000020  REL32                      00000000        16  ___stdio_common_vfprintf
+
+RELOCATIONS #6
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000019  REL32                      00000000        10  ___acrt_iob_func
+ 00000022  REL32                      00000000        17  __vfprintf_l
+
+  Summary
+
+          40 .chks64
+          94 .data
+          84 .debug$S
+          2F .drectve
+         2A2 .text$mn

@@ -1,0 +1,12 @@
+1 + ... + 100 = 5050
+Enter n (1-100): Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): Result: 5050

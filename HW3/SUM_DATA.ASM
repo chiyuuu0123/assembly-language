@@ -1,0 +1,22 @@
+; Result held in a 16-bit variable in the data segment.
+.MODEL SMALL
+.STACK 100H
+.DATA
+TOTAL DW 0
+.CODE
+START:
+    MOV AX,@DATA
+    MOV DS,AX
+    MOV AX,1
+    MOV CX,100
+SUM_LOOP:
+    ADD TOTAL,AX
+    INC AX
+    LOOP SUM_LOOP
+    MOV AX,TOTAL
+    CALL PRINT_U16
+    CALL NEWLINE
+    MOV AX,4C00H
+    INT 21H
+INCLUDE PRINT.INC
+END START

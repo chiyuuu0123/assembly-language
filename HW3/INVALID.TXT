@@ -1,0 +1,22 @@
+Enter n (1-100): 0
+Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): 101
+Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): -1
+Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): abc
+Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): 
+Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): 1000
+Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): 1a
+Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100):  1
+Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): 1 
+Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): 000
+Invalid input. Enter an integer from 1 to 100.
+Enter n (1-100): 100
+Result: 5050

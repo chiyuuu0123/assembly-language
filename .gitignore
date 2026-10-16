@@ -25,6 +25,11 @@
 stdout.txt
 stderr.txt
 DONE.TXT
+/HW3/TESTS/
+/HW3/RUNTEST.BAT
+/HW3/BUILD.OK
+/HW3/*.LST
+/HW3/*.COD
 
 # Editor and operating system files
 .vs/

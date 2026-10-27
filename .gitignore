@@ -32,3 +32,12 @@ DONE.TXT
 __pycache__/
 Thumbs.db
 .DS_Store
+/HW4/BUILD.OK
+/HW4/*.LST
+/HW4/*.COD
+# Local verification artifacts retained when switching from homework-03.
+/HW3/TESTS/
+/HW3/RUNTEST.BAT
+/HW3/BUILD.OK
+/HW3/*.LST
+/HW3/*.COD

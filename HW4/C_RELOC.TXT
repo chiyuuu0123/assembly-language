@@ -1,0 +1,45 @@
+
+Dump of file MUL9_C.OBJ
+
+File Type: COFF OBJECT
+
+RELOCATIONS #3
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 0000001D  DIR32                      00000000        1C  $SG10021
+ 00000022  REL32                      00000000        15  _printf
+ 00000056  REL32                      00000000        11  _putchar
+ 00000077  DIR32                      00000000        1D  $SG10034
+ 0000007C  REL32                      00000000        12  _puts
+ 000000BE  REL32                      00000000        16  _print_cell
+ 000000CA  REL32                      00000000        11  _putchar
+ 000000E4  REL32                      00000000        17  _print_table
+
+RELOCATIONS #4
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000004  DIR32                      00000000        19  ?_OptionsStorage@?1??__local_stdio_printf_options@@9@9 (`__local_stdio_printf_options'::`2'::_OptionsStorage)
+
+RELOCATIONS #5
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000014  REL32                      00000000         F  ___local_stdio_printf_options
+ 00000020  REL32                      00000000        13  ___stdio_common_vfprintf
+
+RELOCATIONS #6
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000019  REL32                      00000000        10  ___acrt_iob_func
+ 00000022  REL32                      00000000        14  __vfprintf_l
+
+  Summary
+
+          40 .chks64
+          1D .data
+          88 .debug$S
+          2F .drectve
+         159 .text$mn

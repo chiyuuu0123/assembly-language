@@ -1,0 +1,16 @@
+; Minimal debugger driver for the same recursive code as FIBRUN.
+.MODEL SMALL
+.STACK 800H
+.DATA
+INCLUDE FIBDATA.INC
+.CODE
+START:
+    MOV AX,@DATA
+    MOV DS,AX
+    MOV BX,4
+    MOV DI,SP
+    CALL FIB
+    MOV AX,4C00H
+    INT 21H
+INCLUDE FIBCORE.INC
+END START

@@ -1,6 +1,7 @@
 * text=auto
 *.md text eol=lf
 *.ASM text eol=crlf
+*.INC text eol=crlf
 *.C text eol=crlf
 *.BAT text eol=crlf
 *.cmd text eol=crlf

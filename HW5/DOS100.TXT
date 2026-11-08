@@ -1,0 +1,3 @@
+Enter n (1-100): 100
+Result: 354224848179261915075
+Recursion stack bytes: 398

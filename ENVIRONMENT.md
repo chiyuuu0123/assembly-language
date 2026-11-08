@@ -27,11 +27,15 @@
   HW4/                     # homework-04 分支
     MASM.EXE
     LINK.EXE
+  HW5/                     # homework-05 分支
+    MASM.EXE
+    LINK.EXE
+    DEBUG.COM
 ```
 
 `tools/DOSBox` 可直接使用本地 DOSBox 的完整安装目录。MASM、LINK 和 CREF 使用课程提供的文件。DEBUG 可使用 [FreeDOS 软件仓库中的 DEBUG](https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/repositories/latest/html/en/base/debug/20250316.0/index.html)。上述工具文件均在 Git 忽略范围内。
 
-配置完成后，双击分支中的运行脚本。脚本将作业目录映射为 DOSBox 的 `C:`；也可先将 DOSBox 的当前工作目录设为对应的 `HW1`～`HW4` 目录，再输入：
+配置完成后，双击分支中的运行脚本。脚本将作业目录映射为 DOSBox 的 `C:`；也可先将 DOSBox 的当前工作目录设为对应的 `HW1`～`HW5` 目录，再输入：
 
 ```text
 mount c .
@@ -43,7 +47,9 @@ BUILD.BAT
 
 作业4在 DOSBox 内运行 `VERIFY.BAT` 会重新构建并执行乘法表及寄存器保护检查，完成后关闭 DOSBox；在 Windows 中构建 C 版本后运行 `python HW4/CHECK.py` 检查实际输出。
 
-## 作业2～4的 C 环境
+作业5在 Windows 中执行 `python HW5/CHECK.py prepare` 后，在 DOSBox 内运行 `VERIFY.BAT`，生成实际输出和 DEBUG 跟踪记录。构建 C 版本后运行 `python HW5/CHECK.py check` 验证结果。
+
+## 作业2～5的 C 环境
 
 安装含“使用 C++ 的桌面开发”组件的 Visual Studio 2022 或其生成工具，使用 x86 MSVC 编译器。
 
@@ -54,4 +60,4 @@ cd HW2
 BUILD_C.cmd
 ```
 
-作业3、4使用同样的方式运行其 `BUILD_C.cmd`。编译关闭优化并保留栈帧，以便对照 C 源码阅读。`C_RAW.TXT` 是对实际 C 目标文件执行 DUMPBIN 后的输出；`C_反汇编注释.md` 解释本次结果。修改源码或更换编译器后，需要同步核对反汇编注释。
+作业3～5使用同样的方式运行其 `BUILD_C.cmd`。编译关闭优化并保留栈帧，以便对照 C 源码阅读。`C_RAW.TXT` 是对实际 C 目标文件执行 DUMPBIN 后的输出；`C_反汇编注释.md` 解释本次结果。修改源码或更换编译器后，需要同步核对反汇编注释。

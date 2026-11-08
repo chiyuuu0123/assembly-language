@@ -1,0 +1,48 @@
+
+Dump of file FIB_C.OBJ
+
+File Type: COFF OBJECT
+
+RELOCATIONS #3
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000013  DIR32                      00000000        1A  _known
+ 00000028  REL32                      00000000        13  _fib
+ 00000037  REL32                      00000000        13  _fib
+ 00000066  DIR32                      00000000        19  _memo
+ 0000007A  DIR32                      00000000        19  _memo
+ 00000095  DIR32                      00000000        19  _memo
+ 000000A9  DIR32                      00000000        1A  _known
+ 000000D8  REL32                      00000000        11  _memcpy
+ 00000184  REL32                      00000000         F  _putchar
+ 00000190  REL32                      00000000         F  _putchar
+ 000001B3  REL32                      00000000         9  ___acrt_iob_func
+ 000001BC  DIR32                      00000000        1B  $SG10619
+ 000001C1  REL32                      00000000         D  _fputs
+ 000001CB  REL32                      00000000         9  ___acrt_iob_func
+ 000001D4  REL32                      00000000         B  _fflush
+ 000001DE  REL32                      00000000         9  ___acrt_iob_func
+ 000001F3  REL32                      00000000         C  _fgets
+ 00000206  DIR32                      00000000        1C  $SG10621
+ 00000212  REL32                      00000000        12  _strcspn
+ 0000022E  REL32                      00000000         9  ___acrt_iob_func
+ 00000237  REL32                      00000000         A  _feof
+ 00000243  REL32                      00000000         E  _getchar
+ 000002D2  DIR32                      00000000        1D  $SG10629
+ 000002D7  REL32                      00000000        10  _puts
+ 000002F5  REL32                      00000000        15  _read_n
+ 0000030E  REL32                      00000000        13  _fib
+ 00000318  REL32                      00000000         9  ___acrt_iob_func
+ 00000321  DIR32                      00000000        1E  $SG10635
+ 00000326  REL32                      00000000         D  _fputs
+ 00000333  DIR32                      00000000        19  _memo
+ 00000339  REL32                      00000000        14  _print_decimal
+
+  Summary
+
+          28 .chks64
+         4B1 .data
+          84 .debug$S
+          2F .drectve
+         346 .text$mn

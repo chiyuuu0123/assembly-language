@@ -32,3 +32,17 @@ DONE.TXT
 __pycache__/
 Thumbs.db
 .DS_Store
+/HW5/TESTS/
+/HW5/BUILD.OK
+/HW5/RUNTEST.BAT
+/HW5/*.LST
+/HW5/*.COD
+# Preserve local output from previous homework branches.
+/HW4/BUILD.OK
+/HW4/*.LST
+/HW4/*.COD
+/HW3/TESTS/
+/HW3/RUNTEST.BAT
+/HW3/BUILD.OK
+/HW3/*.LST
+/HW3/*.COD

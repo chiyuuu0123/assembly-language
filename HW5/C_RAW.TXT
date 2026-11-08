@@ -1,0 +1,309 @@
+
+Dump of file FIB_C.OBJ
+
+File Type: COFF OBJECT
+
+_fib:
+  00000000: 55                 push        ebp
+  00000001: 8B EC              mov         ebp,esp
+  00000003: 83 EC 0C           sub         esp,0Ch
+  00000006: C7 45 F4 00 00 00  mov         dword ptr [ebp-0Ch],0
+            00
+  0000000D: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00000010: 0F B6 88 00 00 00  movzx       ecx,byte ptr _known[eax]
+            00
+  00000017: 85 C9              test        ecx,ecx
+  00000019: 74 05              je          00000020
+  0000001B: E9 8E 00 00 00     jmp         000000AE
+  00000020: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  00000023: 83 EA 01           sub         edx,1
+  00000026: 52                 push        edx
+  00000027: E8 00 00 00 00     call        _fib
+  0000002C: 83 C4 04           add         esp,4
+  0000002F: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00000032: 83 E8 02           sub         eax,2
+  00000035: 50                 push        eax
+  00000036: E8 00 00 00 00     call        _fib
+  0000003B: 83 C4 04           add         esp,4
+  0000003E: C7 45 FC 00 00 00  mov         dword ptr [ebp-4],0
+            00
+  00000045: EB 09              jmp         00000050
+  00000047: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0000004A: 83 C1 01           add         ecx,1
+  0000004D: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00000050: 83 7D FC 05        cmp         dword ptr [ebp-4],5
+  00000054: 73 4E              jae         000000A4
+  00000056: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  00000059: 83 EA 01           sub         edx,1
+  0000005C: 6B C2 0A           imul        eax,edx,0Ah
+  0000005F: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00000062: 0F B7 94 48 00 00  movzx       edx,word ptr _memo[eax+ecx*2]
+            00 00
+  0000006A: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0000006D: 83 E8 02           sub         eax,2
+  00000070: 6B C8 0A           imul        ecx,eax,0Ah
+  00000073: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  00000076: 0F B7 8C 41 00 00  movzx       ecx,word ptr _memo[ecx+eax*2]
+            00 00
+  0000007E: 03 55 F4           add         edx,dword ptr [ebp-0Ch]
+  00000081: 03 CA              add         ecx,edx
+  00000083: 89 4D F8           mov         dword ptr [ebp-8],ecx
+  00000086: 6B 55 08 0A        imul        edx,dword ptr [ebp+8],0Ah
+  0000008A: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  0000008D: 66 8B 4D F8        mov         cx,word ptr [ebp-8]
+  00000091: 66 89 8C 42 00 00  mov         word ptr _memo[edx+eax*2],cx
+            00 00
+  00000099: 8B 55 F8           mov         edx,dword ptr [ebp-8]
+  0000009C: C1 EA 10           shr         edx,10h
+  0000009F: 89 55 F4           mov         dword ptr [ebp-0Ch],edx
+  000000A2: EB A3              jmp         00000047
+  000000A4: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  000000A7: C6 80 00 00 00 00  mov         byte ptr _known[eax],1
+            01
+  000000AE: 8B E5              mov         esp,ebp
+  000000B0: 5D                 pop         ebp
+  000000B1: C3                 ret
+  000000B2: CC                 int         3
+  000000B3: CC                 int         3
+  000000B4: CC                 int         3
+  000000B5: CC                 int         3
+  000000B6: CC                 int         3
+  000000B7: CC                 int         3
+  000000B8: CC                 int         3
+  000000B9: CC                 int         3
+  000000BA: CC                 int         3
+  000000BB: CC                 int         3
+  000000BC: CC                 int         3
+  000000BD: CC                 int         3
+  000000BE: CC                 int         3
+  000000BF: CC                 int         3
+_print_decimal:
+  000000C0: 55                 push        ebp
+  000000C1: 8B EC              mov         ebp,esp
+  000000C3: 83 EC 3C           sub         esp,3Ch
+  000000C6: C7 45 FC 00 00 00  mov         dword ptr [ebp-4],0
+            00
+  000000CD: 6A 0A              push        0Ah
+  000000CF: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  000000D2: 50                 push        eax
+  000000D3: 8D 4D E0           lea         ecx,[ebp-20h]
+  000000D6: 51                 push        ecx
+  000000D7: E8 00 00 00 00     call        _memcpy
+  000000DC: 83 C4 0C           add         esp,0Ch
+  000000DF: C7 45 F4 00 00 00  mov         dword ptr [ebp-0Ch],0
+            00
+  000000E6: C7 45 F0 00 00 00  mov         dword ptr [ebp-10h],0
+            00
+  000000ED: C7 45 F8 04 00 00  mov         dword ptr [ebp-8],4
+            00
+  000000F4: EB 09              jmp         000000FF
+  000000F6: 8B 55 F8           mov         edx,dword ptr [ebp-8]
+  000000F9: 83 EA 01           sub         edx,1
+  000000FC: 89 55 F8           mov         dword ptr [ebp-8],edx
+  000000FF: 83 7D F8 00        cmp         dword ptr [ebp-8],0
+  00000103: 7C 46              jl          0000014B
+  00000105: 8B 45 F4           mov         eax,dword ptr [ebp-0Ch]
+  00000108: C1 E0 10           shl         eax,10h
+  0000010B: 8B 4D F8           mov         ecx,dword ptr [ebp-8]
+  0000010E: 0F B7 54 4D E0     movzx       edx,word ptr [ebp+ecx*2-20h]
+  00000113: 0B C2              or          eax,edx
+  00000115: 89 45 EC           mov         dword ptr [ebp-14h],eax
+  00000118: 8B 45 EC           mov         eax,dword ptr [ebp-14h]
+  0000011B: 33 D2              xor         edx,edx
+  0000011D: B9 0A 00 00 00     mov         ecx,0Ah
+  00000122: F7 F1              div         eax,ecx
+  00000124: 8B 55 F8           mov         edx,dword ptr [ebp-8]
+  00000127: 66 89 44 55 E0     mov         word ptr [ebp+edx*2-20h],ax
+  0000012C: 8B 45 EC           mov         eax,dword ptr [ebp-14h]
+  0000012F: 33 D2              xor         edx,edx
+  00000131: B9 0A 00 00 00     mov         ecx,0Ah
+  00000136: F7 F1              div         eax,ecx
+  00000138: 89 55 F4           mov         dword ptr [ebp-0Ch],edx
+  0000013B: 8B 55 F8           mov         edx,dword ptr [ebp-8]
+  0000013E: 0F B7 44 55 E0     movzx       eax,word ptr [ebp+edx*2-20h]
+  00000143: 0B 45 F0           or          eax,dword ptr [ebp-10h]
+  00000146: 89 45 F0           mov         dword ptr [ebp-10h],eax
+  00000149: EB AB              jmp         000000F6
+  0000014B: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  0000014E: 83 C1 30           add         ecx,30h
+  00000151: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  00000154: 88 4C 15 C4        mov         byte ptr [ebp+edx-3Ch],cl
+  00000158: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  0000015B: 83 C0 01           add         eax,1
+  0000015E: 89 45 FC           mov         dword ptr [ebp-4],eax
+  00000161: 83 7D F0 00        cmp         dword ptr [ebp-10h],0
+  00000165: 0F 85 74 FF FF FF  jne         000000DF
+  0000016B: 83 7D FC 00        cmp         dword ptr [ebp-4],0
+  0000016F: 74 1C              je          0000018D
+  00000171: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00000174: 83 E9 01           sub         ecx,1
+  00000177: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  0000017A: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  0000017D: 0F BE 44 15 C4     movsx       eax,byte ptr [ebp+edx-3Ch]
+  00000182: 50                 push        eax
+  00000183: E8 00 00 00 00     call        _putchar
+  00000188: 83 C4 04           add         esp,4
+  0000018B: EB DE              jmp         0000016B
+  0000018D: 6A 0A              push        0Ah
+  0000018F: E8 00 00 00 00     call        _putchar
+  00000194: 83 C4 04           add         esp,4
+  00000197: 8B E5              mov         esp,ebp
+  00000199: 5D                 pop         ebp
+  0000019A: C3                 ret
+  0000019B: CC                 int         3
+  0000019C: CC                 int         3
+  0000019D: CC                 int         3
+  0000019E: CC                 int         3
+  0000019F: CC                 int         3
+_read_n:
+  000001A0: 55                 push        ebp
+  000001A1: 8B EC              mov         ebp,esp
+  000001A3: 81 EC 90 00 00 00  sub         esp,90h
+  000001A9: C7 45 F4 00 00 00  mov         dword ptr [ebp-0Ch],0
+            00
+  000001B0: 6A 01              push        1
+  000001B2: E8 00 00 00 00     call        ___acrt_iob_func
+  000001B7: 83 C4 04           add         esp,4
+  000001BA: 50                 push        eax
+  000001BB: 68 00 00 00 00     push        offset $SG10619
+  000001C0: E8 00 00 00 00     call        _fputs
+  000001C5: 83 C4 08           add         esp,8
+  000001C8: 6A 01              push        1
+  000001CA: E8 00 00 00 00     call        ___acrt_iob_func
+  000001CF: 83 C4 04           add         esp,4
+  000001D2: 50                 push        eax
+  000001D3: E8 00 00 00 00     call        _fflush
+  000001D8: 83 C4 04           add         esp,4
+  000001DB: 6A 00              push        0
+  000001DD: E8 00 00 00 00     call        ___acrt_iob_func
+  000001E2: 83 C4 04           add         esp,4
+  000001E5: 50                 push        eax
+  000001E6: 68 80 00 00 00     push        80h
+  000001EB: 8D 85 70 FF FF FF  lea         eax,[ebp-90h]
+  000001F1: 50                 push        eax
+  000001F2: E8 00 00 00 00     call        _fgets
+  000001F7: 83 C4 0C           add         esp,0Ch
+  000001FA: 85 C0              test        eax,eax
+  000001FC: 75 07              jne         00000205
+  000001FE: 33 C0              xor         eax,eax
+  00000200: E9 DE 00 00 00     jmp         000002E3
+  00000205: 68 00 00 00 00     push        offset $SG10621
+  0000020A: 8D 8D 70 FF FF FF  lea         ecx,[ebp-90h]
+  00000210: 51                 push        ecx
+  00000211: E8 00 00 00 00     call        _strcspn
+  00000216: 83 C4 08           add         esp,8
+  00000219: 89 45 F8           mov         dword ptr [ebp-8],eax
+  0000021C: 8B 55 F8           mov         edx,dword ptr [ebp-8]
+  0000021F: 0F BE 84 15 70 FF  movsx       eax,byte ptr [ebp+edx-90h]
+            FF FF
+  00000227: 85 C0              test        eax,eax
+  00000229: 75 2D              jne         00000258
+  0000022B: 6A 00              push        0
+  0000022D: E8 00 00 00 00     call        ___acrt_iob_func
+  00000232: 83 C4 04           add         esp,4
+  00000235: 50                 push        eax
+  00000236: E8 00 00 00 00     call        _feof
+  0000023B: 83 C4 04           add         esp,4
+  0000023E: 85 C0              test        eax,eax
+  00000240: 75 16              jne         00000258
+  00000242: E8 00 00 00 00     call        _getchar
+  00000247: 89 45 F0           mov         dword ptr [ebp-10h],eax
+  0000024A: 83 7D F0 0A        cmp         dword ptr [ebp-10h],0Ah
+  0000024E: 74 06              je          00000256
+  00000250: 83 7D F0 FF        cmp         dword ptr [ebp-10h],0FFFFFFFFh
+  00000254: 75 EC              jne         00000242
+  00000256: EB 79              jmp         000002D1
+  00000258: 83 7D F8 01        cmp         dword ptr [ebp-8],1
+  0000025C: 72 73              jb          000002D1
+  0000025E: 83 7D F8 03        cmp         dword ptr [ebp-8],3
+  00000262: 77 6D              ja          000002D1
+  00000264: C7 45 FC 00 00 00  mov         dword ptr [ebp-4],0
+            00
+  0000026B: EB 09              jmp         00000276
+  0000026D: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00000270: 83 C1 01           add         ecx,1
+  00000273: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00000276: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  00000279: 3B 55 F8           cmp         edx,dword ptr [ebp-8]
+  0000027C: 73 3A              jae         000002B8
+  0000027E: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  00000281: 0F BE 8C 05 70 FF  movsx       ecx,byte ptr [ebp+eax-90h]
+            FF FF
+  00000289: 83 F9 30           cmp         ecx,30h
+  0000028C: 7C 10              jl          0000029E
+  0000028E: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  00000291: 0F BE 84 15 70 FF  movsx       eax,byte ptr [ebp+edx-90h]
+            FF FF
+  00000299: 83 F8 39           cmp         eax,39h
+  0000029C: 7E 02              jle         000002A0
+  0000029E: EB 18              jmp         000002B8
+  000002A0: 6B 4D F4 0A        imul        ecx,dword ptr [ebp-0Ch],0Ah
+  000002A4: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  000002A7: 0F BE 84 15 70 FF  movsx       eax,byte ptr [ebp+edx-90h]
+            FF FF
+  000002AF: 8D 4C 01 D0        lea         ecx,[ecx+eax-30h]
+  000002B3: 89 4D F4           mov         dword ptr [ebp-0Ch],ecx
+  000002B6: EB B5              jmp         0000026D
+  000002B8: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  000002BB: 3B 55 F8           cmp         edx,dword ptr [ebp-8]
+  000002BE: 75 11              jne         000002D1
+  000002C0: 83 7D F4 01        cmp         dword ptr [ebp-0Ch],1
+  000002C4: 72 0B              jb          000002D1
+  000002C6: 83 7D F4 64        cmp         dword ptr [ebp-0Ch],64h
+  000002CA: 77 05              ja          000002D1
+  000002CC: 8B 45 F4           mov         eax,dword ptr [ebp-0Ch]
+  000002CF: EB 12              jmp         000002E3
+  000002D1: 68 00 00 00 00     push        offset $SG10629
+  000002D6: E8 00 00 00 00     call        _puts
+  000002DB: 83 C4 04           add         esp,4
+  000002DE: E9 C6 FE FF FF     jmp         000001A9
+  000002E3: 8B E5              mov         esp,ebp
+  000002E5: 5D                 pop         ebp
+  000002E6: C3                 ret
+  000002E7: CC                 int         3
+  000002E8: CC                 int         3
+  000002E9: CC                 int         3
+  000002EA: CC                 int         3
+  000002EB: CC                 int         3
+  000002EC: CC                 int         3
+  000002ED: CC                 int         3
+  000002EE: CC                 int         3
+  000002EF: CC                 int         3
+_main:
+  000002F0: 55                 push        ebp
+  000002F1: 8B EC              mov         ebp,esp
+  000002F3: 51                 push        ecx
+  000002F4: E8 00 00 00 00     call        _read_n
+  000002F9: 89 45 FC           mov         dword ptr [ebp-4],eax
+  000002FC: 83 7D FC 00        cmp         dword ptr [ebp-4],0
+  00000300: 75 07              jne         00000309
+  00000302: B8 01 00 00 00     mov         eax,1
+  00000307: EB 39              jmp         00000342
+  00000309: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  0000030C: 50                 push        eax
+  0000030D: E8 00 00 00 00     call        _fib
+  00000312: 83 C4 04           add         esp,4
+  00000315: 6A 01              push        1
+  00000317: E8 00 00 00 00     call        ___acrt_iob_func
+  0000031C: 83 C4 04           add         esp,4
+  0000031F: 50                 push        eax
+  00000320: 68 00 00 00 00     push        offset $SG10635
+  00000325: E8 00 00 00 00     call        _fputs
+  0000032A: 83 C4 08           add         esp,8
+  0000032D: 6B 4D FC 0A        imul        ecx,dword ptr [ebp-4],0Ah
+  00000331: 81 C1 00 00 00 00  add         ecx,offset _memo
+  00000337: 51                 push        ecx
+  00000338: E8 00 00 00 00     call        _print_decimal
+  0000033D: 83 C4 04           add         esp,4
+  00000340: 33 C0              xor         eax,eax
+  00000342: 8B E5              mov         esp,ebp
+  00000344: 5D                 pop         ebp
+  00000345: C3                 ret
+
+  Summary
+
+          28 .chks64
+         4B1 .data
+          84 .debug$S
+          2F .drectve
+         346 .text$mn

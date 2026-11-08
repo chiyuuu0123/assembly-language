@@ -8,6 +8,7 @@
 | 作业2 | [homework-02](https://github.com/chiyuuu0123/assembly-language/tree/homework-02) | LOOP 与条件跳转打印小写 ASCII 表；C 实现及反汇编注释 | [作业2说明](https://github.com/chiyuuu0123/assembly-language/blob/homework-02/作业2说明.md) |
 | 作业3 | [homework-03](https://github.com/chiyuuu0123/assembly-language/tree/homework-03) | 求和与十进制输出；寄存器、数据段、栈存储；输入 1～100；C 实现及反汇编注释 | [作业3说明](https://github.com/chiyuuu0123/assembly-language/blob/homework-03/作业3说明.md) |
 | 作业4 | [homework-04](https://github.com/chiyuuu0123/assembly-language/tree/homework-04) | 倒三角九九乘法表与 9×9 数据纠错；过程调用及 C 全局、局部数组反汇编对照 | [作业4说明](https://github.com/chiyuuu0123/assembly-language/blob/homework-04/作业4说明.md) |
+| 作业5 | [homework-05](https://github.com/chiyuuu0123/assembly-language/tree/homework-05) | 递归求斐波那契数；80 位存储、递归栈与 DEBUG 单步跟踪；C 反汇编 | [作业5说明](https://github.com/chiyuuu0123/assembly-language/blob/homework-05/作业5说明.md) |
 
 ## 获取作业
 
@@ -17,13 +18,13 @@ cd assembly-language
 git switch homework-01
 ```
 
-查看其他作业时使用对应的 `git switch homework-NN`，例如 `git switch homework-04`。各作业分支从 `main` 独立创建，保存该次作业的源代码、构建脚本、说明及运行记录。
+查看其他作业时使用对应的 `git switch homework-NN`，例如 `git switch homework-05`。各作业分支从 `main` 独立创建，保存该次作业的源代码、构建脚本、说明及运行记录。
 
 ## 运行环境
 
 请先阅读 [环境配置说明](ENVIRONMENT.md)。仓库提供源码和脚本，第三方工具与构建后的可执行文件由本地环境提供。完成配置后，在对应分支双击对应的 `运行作业N.cmd`。
 
-汇编作业在 DOSBox 中运行。作业2～4的 C 版本使用 MSVC 编译为 32 位 Windows 控制台程序，并提供实际目标文件的反汇编及中文注释。
+汇编作业在 DOSBox 中运行。作业2～5的 C 版本使用 MSVC 编译为 32 位 Windows 控制台程序，并提供实际目标文件的反汇编及中文注释。
 
 ## 后续作业约定
 

@@ -1,0 +1,307 @@
+
+Dump of file FIX9_C.OBJ
+
+File Type: COFF OBJECT
+
+_report_error:
+  00000000: 55                 push        ebp
+  00000001: 8B EC              mov         ebp,esp
+  00000003: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  00000006: 50                 push        eax
+  00000007: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  0000000A: 51                 push        ecx
+  0000000B: 68 00 00 00 00     push        offset $SG10545
+  00000010: E8 00 00 00 00     call        _printf
+  00000015: 83 C4 0C           add         esp,0Ch
+  00000018: 5D                 pop         ebp
+  00000019: C3                 ret
+  0000001A: CC                 int         3
+  0000001B: CC                 int         3
+  0000001C: CC                 int         3
+  0000001D: CC                 int         3
+  0000001E: CC                 int         3
+  0000001F: CC                 int         3
+_check_table:
+  00000020: 55                 push        ebp
+  00000021: 8B EC              mov         ebp,esp
+  00000023: 83 EC 08           sub         esp,8
+  00000026: 68 00 00 00 00     push        offset $SG10557
+  0000002B: E8 00 00 00 00     call        _puts
+  00000030: 83 C4 04           add         esp,4
+  00000033: C7 45 F8 01 00 00  mov         dword ptr [ebp-8],1
+            00
+  0000003A: EB 09              jmp         00000045
+  0000003C: 8B 45 F8           mov         eax,dword ptr [ebp-8]
+  0000003F: 83 C0 01           add         eax,1
+  00000042: 89 45 F8           mov         dword ptr [ebp-8],eax
+  00000045: 83 7D F8 09        cmp         dword ptr [ebp-8],9
+  00000049: 7F 4B              jg          00000096
+  0000004B: C7 45 FC 01 00 00  mov         dword ptr [ebp-4],1
+            00
+  00000052: EB 09              jmp         0000005D
+  00000054: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00000057: 83 C1 01           add         ecx,1
+  0000005A: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  0000005D: 83 7D FC 09        cmp         dword ptr [ebp-4],9
+  00000061: 7F 31              jg          00000094
+  00000063: 8B 55 F8           mov         edx,dword ptr [ebp-8]
+  00000066: 83 EA 01           sub         edx,1
+  00000069: 6B C2 09           imul        eax,edx,9
+  0000006C: 03 45 08           add         eax,dword ptr [ebp+8]
+  0000006F: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00000072: 0F B6 54 08 FF     movzx       edx,byte ptr [eax+ecx-1]
+  00000077: 8B 45 F8           mov         eax,dword ptr [ebp-8]
+  0000007A: 0F AF 45 FC        imul        eax,dword ptr [ebp-4]
+  0000007E: 3B D0              cmp         edx,eax
+  00000080: 74 10              je          00000092
+  00000082: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00000085: 51                 push        ecx
+  00000086: 8B 55 F8           mov         edx,dword ptr [ebp-8]
+  00000089: 52                 push        edx
+  0000008A: E8 00 00 00 00     call        _report_error
+  0000008F: 83 C4 08           add         esp,8
+  00000092: EB C0              jmp         00000054
+  00000094: EB A6              jmp         0000003C
+  00000096: 68 00 00 00 00     push        offset $SG10559
+  0000009B: E8 00 00 00 00     call        _puts
+  000000A0: 83 C4 04           add         esp,4
+  000000A3: 8B E5              mov         esp,ebp
+  000000A5: 5D                 pop         ebp
+  000000A6: C3                 ret
+  000000A7: CC                 int         3
+  000000A8: CC                 int         3
+  000000A9: CC                 int         3
+  000000AA: CC                 int         3
+  000000AB: CC                 int         3
+  000000AC: CC                 int         3
+  000000AD: CC                 int         3
+  000000AE: CC                 int         3
+  000000AF: CC                 int         3
+_check_global:
+  000000B0: 55                 push        ebp
+  000000B1: 8B EC              mov         ebp,esp
+  000000B3: 68 00 00 00 00     push        offset _global_table
+  000000B8: E8 00 00 00 00     call        _check_table
+  000000BD: 83 C4 04           add         esp,4
+  000000C0: 5D                 pop         ebp
+  000000C1: C3                 ret
+  000000C2: CC                 int         3
+  000000C3: CC                 int         3
+  000000C4: CC                 int         3
+  000000C5: CC                 int         3
+  000000C6: CC                 int         3
+  000000C7: CC                 int         3
+  000000C8: CC                 int         3
+  000000C9: CC                 int         3
+  000000CA: CC                 int         3
+  000000CB: CC                 int         3
+  000000CC: CC                 int         3
+  000000CD: CC                 int         3
+  000000CE: CC                 int         3
+  000000CF: CC                 int         3
+_check_local:
+  000000D0: 55                 push        ebp
+  000000D1: 8B EC              mov         ebp,esp
+  000000D3: 83 EC 54           sub         esp,54h
+  000000D6: C6 45 AC 07        mov         byte ptr [ebp-54h],7
+  000000DA: C6 45 AD 02        mov         byte ptr [ebp-53h],2
+  000000DE: C6 45 AE 03        mov         byte ptr [ebp-52h],3
+  000000E2: C6 45 AF 04        mov         byte ptr [ebp-51h],4
+  000000E6: C6 45 B0 05        mov         byte ptr [ebp-50h],5
+  000000EA: C6 45 B1 06        mov         byte ptr [ebp-4Fh],6
+  000000EE: C6 45 B2 07        mov         byte ptr [ebp-4Eh],7
+  000000F2: C6 45 B3 08        mov         byte ptr [ebp-4Dh],8
+  000000F6: C6 45 B4 09        mov         byte ptr [ebp-4Ch],9
+  000000FA: C6 45 B5 02        mov         byte ptr [ebp-4Bh],2
+  000000FE: C6 45 B6 04        mov         byte ptr [ebp-4Ah],4
+  00000102: C6 45 B7 07        mov         byte ptr [ebp-49h],7
+  00000106: C6 45 B8 08        mov         byte ptr [ebp-48h],8
+  0000010A: C6 45 B9 0A        mov         byte ptr [ebp-47h],0Ah
+  0000010E: C6 45 BA 0C        mov         byte ptr [ebp-46h],0Ch
+  00000112: C6 45 BB 0E        mov         byte ptr [ebp-45h],0Eh
+  00000116: C6 45 BC 10        mov         byte ptr [ebp-44h],10h
+  0000011A: C6 45 BD 12        mov         byte ptr [ebp-43h],12h
+  0000011E: C6 45 BE 03        mov         byte ptr [ebp-42h],3
+  00000122: C6 45 BF 06        mov         byte ptr [ebp-41h],6
+  00000126: C6 45 C0 09        mov         byte ptr [ebp-40h],9
+  0000012A: C6 45 C1 0C        mov         byte ptr [ebp-3Fh],0Ch
+  0000012E: C6 45 C2 0F        mov         byte ptr [ebp-3Eh],0Fh
+  00000132: C6 45 C3 12        mov         byte ptr [ebp-3Dh],12h
+  00000136: C6 45 C4 15        mov         byte ptr [ebp-3Ch],15h
+  0000013A: C6 45 C5 18        mov         byte ptr [ebp-3Bh],18h
+  0000013E: C6 45 C6 1B        mov         byte ptr [ebp-3Ah],1Bh
+  00000142: C6 45 C7 04        mov         byte ptr [ebp-39h],4
+  00000146: C6 45 C8 08        mov         byte ptr [ebp-38h],8
+  0000014A: C6 45 C9 0C        mov         byte ptr [ebp-37h],0Ch
+  0000014E: C6 45 CA 10        mov         byte ptr [ebp-36h],10h
+  00000152: C6 45 CB 07        mov         byte ptr [ebp-35h],7
+  00000156: C6 45 CC 18        mov         byte ptr [ebp-34h],18h
+  0000015A: C6 45 CD 1C        mov         byte ptr [ebp-33h],1Ch
+  0000015E: C6 45 CE 20        mov         byte ptr [ebp-32h],20h
+  00000162: C6 45 CF 24        mov         byte ptr [ebp-31h],24h
+  00000166: C6 45 D0 05        mov         byte ptr [ebp-30h],5
+  0000016A: C6 45 D1 0A        mov         byte ptr [ebp-2Fh],0Ah
+  0000016E: C6 45 D2 0F        mov         byte ptr [ebp-2Eh],0Fh
+  00000172: C6 45 D3 14        mov         byte ptr [ebp-2Dh],14h
+  00000176: C6 45 D4 19        mov         byte ptr [ebp-2Ch],19h
+  0000017A: C6 45 D5 1E        mov         byte ptr [ebp-2Bh],1Eh
+  0000017E: C6 45 D6 23        mov         byte ptr [ebp-2Ah],23h
+  00000182: C6 45 D7 28        mov         byte ptr [ebp-29h],28h
+  00000186: C6 45 D8 2D        mov         byte ptr [ebp-28h],2Dh
+  0000018A: C6 45 D9 06        mov         byte ptr [ebp-27h],6
+  0000018E: C6 45 DA 0C        mov         byte ptr [ebp-26h],0Ch
+  00000192: C6 45 DB 12        mov         byte ptr [ebp-25h],12h
+  00000196: C6 45 DC 18        mov         byte ptr [ebp-24h],18h
+  0000019A: C6 45 DD 1E        mov         byte ptr [ebp-23h],1Eh
+  0000019E: C6 45 DE 07        mov         byte ptr [ebp-22h],7
+  000001A2: C6 45 DF 2A        mov         byte ptr [ebp-21h],2Ah
+  000001A6: C6 45 E0 30        mov         byte ptr [ebp-20h],30h
+  000001AA: C6 45 E1 36        mov         byte ptr [ebp-1Fh],36h
+  000001AE: C6 45 E2 07        mov         byte ptr [ebp-1Eh],7
+  000001B2: C6 45 E3 0E        mov         byte ptr [ebp-1Dh],0Eh
+  000001B6: C6 45 E4 15        mov         byte ptr [ebp-1Ch],15h
+  000001BA: C6 45 E5 1C        mov         byte ptr [ebp-1Bh],1Ch
+  000001BE: C6 45 E6 23        mov         byte ptr [ebp-1Ah],23h
+  000001C2: C6 45 E7 2A        mov         byte ptr [ebp-19h],2Ah
+  000001C6: C6 45 E8 31        mov         byte ptr [ebp-18h],31h
+  000001CA: C6 45 E9 38        mov         byte ptr [ebp-17h],38h
+  000001CE: C6 45 EA 3F        mov         byte ptr [ebp-16h],3Fh
+  000001D2: C6 45 EB 08        mov         byte ptr [ebp-15h],8
+  000001D6: C6 45 EC 10        mov         byte ptr [ebp-14h],10h
+  000001DA: C6 45 ED 18        mov         byte ptr [ebp-13h],18h
+  000001DE: C6 45 EE 20        mov         byte ptr [ebp-12h],20h
+  000001E2: C6 45 EF 28        mov         byte ptr [ebp-11h],28h
+  000001E6: C6 45 F0 30        mov         byte ptr [ebp-10h],30h
+  000001EA: C6 45 F1 38        mov         byte ptr [ebp-0Fh],38h
+  000001EE: C6 45 F2 07        mov         byte ptr [ebp-0Eh],7
+  000001F2: C6 45 F3 48        mov         byte ptr [ebp-0Dh],48h
+  000001F6: C6 45 F4 09        mov         byte ptr [ebp-0Ch],9
+  000001FA: C6 45 F5 12        mov         byte ptr [ebp-0Bh],12h
+  000001FE: C6 45 F6 1B        mov         byte ptr [ebp-0Ah],1Bh
+  00000202: C6 45 F7 24        mov         byte ptr [ebp-9],24h
+  00000206: C6 45 F8 2D        mov         byte ptr [ebp-8],2Dh
+  0000020A: C6 45 F9 36        mov         byte ptr [ebp-7],36h
+  0000020E: C6 45 FA 3F        mov         byte ptr [ebp-6],3Fh
+  00000212: C6 45 FB 48        mov         byte ptr [ebp-5],48h
+  00000216: C6 45 FC 51        mov         byte ptr [ebp-4],51h
+  0000021A: 8D 45 AC           lea         eax,[ebp-54h]
+  0000021D: 50                 push        eax
+  0000021E: E8 00 00 00 00     call        _check_table
+  00000223: 83 C4 04           add         esp,4
+  00000226: 8B E5              mov         esp,ebp
+  00000228: 5D                 pop         ebp
+  00000229: C3                 ret
+  0000022A: CC                 int         3
+  0000022B: CC                 int         3
+  0000022C: CC                 int         3
+  0000022D: CC                 int         3
+  0000022E: CC                 int         3
+  0000022F: CC                 int         3
+_main:
+  00000230: 55                 push        ebp
+  00000231: 8B EC              mov         ebp,esp
+  00000233: 83 7D 08 01        cmp         dword ptr [ebp+8],1
+  00000237: 74 26              je          0000025F
+  00000239: 83 7D 08 02        cmp         dword ptr [ebp+8],2
+  0000023D: 75 28              jne         00000267
+  0000023F: 68 00 00 00 00     push        offset $SG10574
+  00000244: B8 04 00 00 00     mov         eax,4
+  00000249: C1 E0 00           shl         eax,0
+  0000024C: 8B 4D 0C           mov         ecx,dword ptr [ebp+0Ch]
+  0000024F: 8B 14 01           mov         edx,dword ptr [ecx+eax]
+  00000252: 52                 push        edx
+  00000253: E8 00 00 00 00     call        _strcmp
+  00000258: 83 C4 08           add         esp,8
+  0000025B: 85 C0              test        eax,eax
+  0000025D: 75 08              jne         00000267
+  0000025F: E8 00 00 00 00     call        _check_global
+  00000264: 90                 nop
+  00000265: EB 4D              jmp         000002B4
+  00000267: 83 7D 08 02        cmp         dword ptr [ebp+8],2
+  0000026B: 75 28              jne         00000295
+  0000026D: 68 00 00 00 00     push        offset $SG10577
+  00000272: B8 04 00 00 00     mov         eax,4
+  00000277: C1 E0 00           shl         eax,0
+  0000027A: 8B 4D 0C           mov         ecx,dword ptr [ebp+0Ch]
+  0000027D: 8B 14 01           mov         edx,dword ptr [ecx+eax]
+  00000280: 52                 push        edx
+  00000281: E8 00 00 00 00     call        _strcmp
+  00000286: 83 C4 08           add         esp,8
+  00000289: 85 C0              test        eax,eax
+  0000028B: 75 08              jne         00000295
+  0000028D: E8 00 00 00 00     call        _check_local
+  00000292: 90                 nop
+  00000293: EB 1F              jmp         000002B4
+  00000295: 6A 02              push        2
+  00000297: E8 00 00 00 00     call        ___acrt_iob_func
+  0000029C: 83 C4 04           add         esp,4
+  0000029F: 50                 push        eax
+  000002A0: 68 00 00 00 00     push        offset $SG10578
+  000002A5: E8 00 00 00 00     call        _fputs
+  000002AA: 83 C4 08           add         esp,8
+  000002AD: B8 01 00 00 00     mov         eax,1
+  000002B2: EB 02              jmp         000002B6
+  000002B4: 33 C0              xor         eax,eax
+  000002B6: 5D                 pop         ebp
+  000002B7: C3                 ret
+
+___local_stdio_printf_options:
+  00000000: 55                 push        ebp
+  00000001: 8B EC              mov         ebp,esp
+  00000003: B8 00 00 00 00     mov         eax,offset ?_OptionsStorage@?1??__local_stdio_printf_options@@9@9
+  00000008: 5D                 pop         ebp
+  00000009: C3                 ret
+
+__vfprintf_l:
+  00000000: 55                 push        ebp
+  00000001: 8B EC              mov         ebp,esp
+  00000003: 8B 45 14           mov         eax,dword ptr [ebp+14h]
+  00000006: 50                 push        eax
+  00000007: 8B 4D 10           mov         ecx,dword ptr [ebp+10h]
+  0000000A: 51                 push        ecx
+  0000000B: 8B 55 0C           mov         edx,dword ptr [ebp+0Ch]
+  0000000E: 52                 push        edx
+  0000000F: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00000012: 50                 push        eax
+  00000013: E8 00 00 00 00     call        ___local_stdio_printf_options
+  00000018: 8B 48 04           mov         ecx,dword ptr [eax+4]
+  0000001B: 51                 push        ecx
+  0000001C: 8B 10              mov         edx,dword ptr [eax]
+  0000001E: 52                 push        edx
+  0000001F: E8 00 00 00 00     call        ___stdio_common_vfprintf
+  00000024: 83 C4 18           add         esp,18h
+  00000027: 5D                 pop         ebp
+  00000028: C3                 ret
+
+_printf:
+  00000000: 55                 push        ebp
+  00000001: 8B EC              mov         ebp,esp
+  00000003: 83 EC 08           sub         esp,8
+  00000006: 8D 45 0C           lea         eax,[ebp+0Ch]
+  00000009: 89 45 FC           mov         dword ptr [ebp-4],eax
+  0000000C: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0000000F: 51                 push        ecx
+  00000010: 6A 00              push        0
+  00000012: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  00000015: 52                 push        edx
+  00000016: 6A 01              push        1
+  00000018: E8 00 00 00 00     call        ___acrt_iob_func
+  0000001D: 83 C4 04           add         esp,4
+  00000020: 50                 push        eax
+  00000021: E8 00 00 00 00     call        __vfprintf_l
+  00000026: 83 C4 10           add         esp,10h
+  00000029: 89 45 F8           mov         dword ptr [ebp-8],eax
+  0000002C: C7 45 FC 00 00 00  mov         dword ptr [ebp-4],0
+            00
+  00000033: 8B 45 F8           mov         eax,dword ptr [ebp-8]
+  00000036: 8B E5              mov         esp,ebp
+  00000038: 5D                 pop         ebp
+  00000039: C3                 ret
+
+  Summary
+
+          40 .chks64
+          A6 .data
+          88 .debug$S
+          2F .drectve
+         325 .text$mn

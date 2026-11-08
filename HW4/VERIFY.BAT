@@ -6,6 +6,8 @@ MUL9.EXE > ASMOUT.TXT
 if errorlevel 1 goto fail
 REGTEST.EXE > REGTEST.TXT
 if errorlevel 1 goto fail
+FIX9.EXE > FIXOUT.TXT
+if errorlevel 1 goto fail
 echo DONE > DONE.TXT
 exit
 :fail

@@ -1,6 +1,6 @@
 # 汇编语言课程作业
 
-当前分支：**homework-04**。查看 [作业4说明](作业4说明.md)、[C 反汇编注释](HW4/C_反汇编注释.md) 和 [实际验证记录](HW4/VERIFY_REPORT.md)。配置环境后双击 `运行作业4.cmd`。
+当前分支：**homework-04**。查看 [作业4说明](作业4说明.md)、[乘法表 C 反汇编](HW4/C_反汇编注释.md)、[纠错实验 C 反汇编](HW4/纠错实验_C反汇编注释.md) 和 [实际验证记录](HW4/VERIFY_REPORT.md)。配置环境后双击 `运行作业4.cmd`。
 
 使用 MASM 5.00、DOSBox 和 DEBUG 学习 8086 汇编语言。每次作业保存在一个独立分支，`main` 提供作业索引和公共环境说明。
 
@@ -9,7 +9,7 @@
 | 作业1 | [homework-01](https://github.com/chiyuuu0123/assembly-language/tree/homework-01) | 搭建环境；常规方式及直接写内存方式运行 Hello world | [作业1说明](https://github.com/chiyuuu0123/assembly-language/blob/homework-01/作业1说明.md) |
 | 作业2 | [homework-02](https://github.com/chiyuuu0123/assembly-language/tree/homework-02) | LOOP 与条件跳转打印小写 ASCII 表；C 实现及反汇编注释 | [作业2说明](https://github.com/chiyuuu0123/assembly-language/blob/homework-02/作业2说明.md) |
 | 作业3 | [homework-03](https://github.com/chiyuuu0123/assembly-language/tree/homework-03) | 求和与十进制输出；寄存器、数据段、栈存储；输入 1～100；C 实现及反汇编注释 | [作业3说明](https://github.com/chiyuuu0123/assembly-language/blob/homework-03/作业3说明.md) |
-| 作业4 | [homework-04](https://github.com/chiyuuu0123/assembly-language/tree/homework-04) | 倒三角九九乘法表；MUL、双重循环、CALL/RET 与寄存器保护；C 反汇编注释 | [作业4说明](https://github.com/chiyuuu0123/assembly-language/blob/homework-04/作业4说明.md) |
+| 作业4 | [homework-04](https://github.com/chiyuuu0123/assembly-language/tree/homework-04) | 倒三角九九乘法表与 9×9 数据纠错；过程调用及 C 全局、局部数组反汇编对照 | [作业4说明](https://github.com/chiyuuu0123/assembly-language/blob/homework-04/作业4说明.md) |
 
 ## 获取作业
 

@@ -8,9 +8,13 @@ masm REGTEST.ASM,REGTEST.OBJ,REGTEST.LST; > TESTASM.LOG
 if errorlevel 1 goto fail
 link REGTEST.OBJ,REGTEST.EXE; > TESTLINK.LOG
 if errorlevel 1 goto fail
+masm FIX9.ASM,FIX9.OBJ,FIX9.LST; > FIXASM.LOG
+if errorlevel 1 goto fail
+link FIX9.OBJ,FIX9.EXE; > FIXLINK.LOG
+if errorlevel 1 goto fail
 echo PASS > BUILD.OK
-echo Multiplication table and register checks built successfully.
+echo Both experiments and register checks built successfully.
 goto end
 :fail
-echo BUILD FAILED. Read ASM.LOG and TESTASM.LOG.
+echo BUILD FAILED. Read the ASM and LINK logs.
 :end

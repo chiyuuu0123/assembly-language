@@ -13,4 +13,10 @@ if errorlevel 1 (
 start "" "..\tools\DOSBox\DOSBox.exe" -noconsole -conf DOSBOX.CONF -c "mount c ." -c "c:" -c "DEMO.BAT"
 echo === Assignment 4: C version, Windows x86 ===
 MUL9_C.EXE
+echo.
+echo === Experiment 2: C global array ===
+FIX9_C.EXE global
+echo.
+echo === Experiment 2: C local array ===
+FIX9_C.EXE local
 pause
